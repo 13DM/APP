@@ -1,0 +1,1168 @@
+
+<canvas id="myCanvas"  style="">
+<script>
+var start=performance.now()/1000;
+
+
+function color_change_main(main,r,g,b,a){
+temp_9=document.createElement("canvas");
+temp_9.width=main.width;
+temp_9.height=main.height;
+// console.log(temp_9.height);
+temp_9.getContext('2d').rect(0, 0, temp_9.width, temp_9.height);
+temp_9.getContext('2d').fillStyle="rgba("+r+","+g+","+b+",1)";	
+temp_9.getContext('2d').fill();
+
+temp_9.getContext('2d').globalCompositeOperation='multiply';
+
+temp_9.getContext('2d').drawImage(main,0,0);
+
+main.getContext('2d').globalCompositeOperation="source-in";
+main.getContext('2d').drawImage(temp_9,0,0);
+
+
+}
+
+
+function color_change(color_type,main_x, main_y, xSize, ySize,main,rotation,a_c,way=0){
+	i=main;
+
+	    ctx.globalAlpha=a_c/255;
+
+	if(color_type==4){
+
+temp_6=document.createElement("canvas");
+temp_6.width=xSize;
+temp_6.height=ySize;
+	    // temp_6.getContext('2d').putImageData(ctx.getImageData(main_x, main_y, xSize, ySize), 0,0);
+	    // wer=;
+
+temp_4=document.createElement("canvas");
+temp_4.width=canvas.width*3;
+temp_4.height=canvas.height*3;
+// temp_4.height=;
+// temp_4.getContext('2d').save();
+temp_4.getContext('2d').translate(temp_4.width/4+main_x+xSize/2 ,temp_4.height/4+main_y+ySize/2);
+
+temp_4.getContext('2d').rotate(2*Math.PI - (rotation)*(Math.PI/180));
+temp_4.getContext('2d').translate(-(temp_4.width/4+main_x+xSize/2) ,-(temp_4.height/4+main_y+ySize/2));
+
+// temp_4.getContext('2d').restore();
+
+temp_4.getContext('2d').drawImage(canvas,temp_4.width/4,temp_4.height/4);
+// alert(main_x);
+
+temp_10=document.createElement("canvas");
+temp_10.width=xSize;
+temp_10.height=ySize;
+
+	    temp_10.getContext('2d').putImageData(temp_4.getContext('2d').getImageData((temp_4.width/4+main_x), (temp_4.height/4+main_y), xSize, ySize), 0,0);
+ temp_6.getContext('2d').drawImage(temp_10,0,0);
+ // temp_6.getContext('2d').drawImage(temp_8, 0,0);
+
+// temp_6.getContext('2d').globalCompositeOperation="source-in";
+
+// // temp_6.getContext('2d').drawImage(ar5[i],0,0,temp_6.width,temp_6.height);
+// // temp_6.getContext('2d').globalCompositeOperation="overlay";
+
+// 	    temp_6.getContext('2d').rect(0, 0, temp_6.width, temp_6.height);
+// temp_6.getContext('2d').fillStyle="rgba(255,255,255,1)";	
+// temp_6.getContext('2d').fill();
+
+// temp_6.getContext('2d').globalCompositeOperation="destination-in";
+
+// temp_7=document.createElement("canvas");
+// temp_7.width=xSize;
+// temp_7.height=ySize;
+
+//  temp_7.getContext('2d').putImageData(wer, 0,0);
+
+// temp_6.getContext('2d').drawImage(temp_7,0,0,temp_6.width,temp_6.height);
+
+
+
+// document.body.append(temp_6);
+
+
+
+temp_7=document.createElement("canvas");
+temp_7.width=xSize;
+temp_7.height=ySize;
+	    // temp_6.getContext('2d').putImageData(ctx.getImageData(main_x, main_y, xSize, ySize), 0,0);
+ // temp_7.getContext('2d').putImageData(ctx.getImageData(main_x, main_y, xSize, ySize), 0,0);
+
+// temp_7.getContext('2d').globalCompositeOperation="source-in";
+
+// temp_7.getContext('2d').drawImage(main,0,0,temp_7.width,temp_7.height);
+temp_7.getContext('2d').globalCompositeOperation="multiply";
+
+	    temp_7.getContext('2d').rect(0, 0, temp_7.width, temp_7.height);
+temp_7.getContext('2d').fillStyle="rgba(255,255,255,1)";	
+temp_7.getContext('2d').fill();
+// temp_7.getContext('2d').globalCompositeOperation="destination-in";
+
+
+ temp_7.getContext('2d').drawImage(main, 0,0,xSize,ySize);
+
+
+
+
+
+
+temp_1=document.createElement("canvas");
+temp_1.width=xSize;
+temp_1.height=ySize;
+	    // temp_6.getContext('2d').putImageData(ctx.getImageData(main_x, main_y, xSize, ySize), 0,0);
+ // temp_7.getContext('2d').putImageData(ctx.getImageData(main_x, main_y, xSize, ySize), 0,0);
+
+// temp_7.getContext('2d').globalCompositeOperation="source-in";
+
+temp_1.getContext('2d').drawImage(main,0,0,temp_1.width,temp_1.height);
+temp_1.getContext('2d').globalCompositeOperation="overlay";
+
+	    temp_1.getContext('2d').rect(0, 0, temp_1.width, temp_1.height);
+temp_1.getContext('2d').fillStyle="rgba(255,255,255,1)";	
+temp_1.getContext('2d').fill();
+temp_1.getContext('2d').globalCompositeOperation="destination-in";
+
+
+ temp_1.getContext('2d').drawImage(main, 0,0,xSize,ySize);
+
+
+temp_1.getContext('2d').globalCompositeOperation="destination-out";
+
+ temp_1.getContext('2d').drawImage(temp_10, 0,0,xSize,ySize);
+
+document.body.append(temp_1);
+
+
+
+// document.body.append(temp_6);
+// temp_7.getContext('2d').globalCompositeOperation="destination-in";
+
+// document.body.append(temp_6);
+
+	    // main.getContext('2d').drawImage(temp_6, 0 ,0,main.width,main.height);
+// ctx.globalCompositeOperation="source-atop";
+	    // ctx.drawImage(temp_6, main_x ,main_y,xSize,ySize);
+temp_6.getContext('2d').globalCompositeOperation="soft-light";
+
+	     temp_6.getContext('2d').drawImage(temp_7, 0 ,0,xSize,ySize);
+
+
+temp_6.getContext('2d').globalCompositeOperation="destination-in";
+	     temp_6.getContext('2d').drawImage(temp_10, 0 ,0,xSize,ySize);
+
+
+ctx.save();
+
+ctx.translate(main_x+xSize/2 ,main_y+ySize/2);
+
+ctx.rotate((rotation)*(Math.PI/180));
+ctx.translate(-(main_x+xSize/2) ,-(main_y+ySize/2));
+
+	    // ctx.drawImage(temp_10, main_x ,main_y,xSize,ySize);
+	    // ctx.drawImage(temp_7, main_x ,main_y,xSize,ySize);
+	    ctx.drawImage(temp_6, main_x ,main_y,xSize,ySize);
+ ctx.drawImage(temp_1, main_x,main_y,xSize,ySize);
+	
+
+ctx.restore();
+	    // main.getContext('2d').drawImage(temp_6, 0 ,0,main.width,main.height);
+
+
+
+
+// ctx.globalCompositeOperation = 'darken';
+// 	    ctx.drawImage(temp_6, main_x ,main_y);
+	    // ctx.drawImage(temp_6, main_x ,main_y);
+// ctx.globalCompositeOperation="darken";
+
+// 	    ctx.drawImage(main, main_x ,main_y,xSize,ySize);
+
+	
+
+
+}
+else if(color_type==7){
+temp_5=document.createElement("canvas");
+	temp_5.width=main.width;
+	temp_5.height=main.height;
+	temp_5.getContext('2d').rect(0, 0, main.width, main.height);
+temp_5.getContext('2d').fillStyle="rgba(255,255,255,1)";	
+temp_5.getContext('2d').fill();
+ctx.globalCompositeOperation="destination-out";
+
+// document.body.append(temp_5);
+
+
+ctx.save();
+ctx.translate(main_x+xSize/2 ,main_y+ySize/2);
+
+ctx.rotate((rotation)*(Math.PI/180));
+ctx.translate(-(main_x+xSize/2) ,-(main_y+ySize/2));
+
+	    // ctx.drawImage(temp_10, main_x ,main_y,xSize,ySize);
+	    ctx.drawImage(temp_5, main_x ,main_y,xSize,ySize);
+
+	
+
+ctx.restore();
+
+
+
+}
+
+if(color_type==5){
+ctx.globalCompositeOperation = 'lighten';
+
+temp_6=document.createElement("canvas");
+temp_6.width=xSize;
+temp_6.height=ySize;
+	    // temp_6.getContext('2d').putImageData(ctx.getImageData(main_x, main_y, xSize, ySize), 0,0);
+
+
+temp_4=document.createElement("canvas");
+temp_4.width=canvas.width*3;
+temp_4.height=canvas.height*3;
+// temp_4.height=;
+// temp_4.getContext('2d').save();
+temp_4.getContext('2d').translate(temp_4.width/4+main_x+xSize/2 ,temp_4.height/4+main_y+ySize/2);
+
+temp_4.getContext('2d').rotate(2*Math.PI - (rotation)*(Math.PI/180));
+temp_4.getContext('2d').translate(-(temp_4.width/4+main_x+xSize/2) ,-(temp_4.height/4+main_y+ySize/2));
+
+// temp_4.getContext('2d').restore();
+
+temp_4.getContext('2d').drawImage(canvas,temp_4.width/4,temp_4.height/4);
+// alert(main_x);
+
+	    temp_6.getContext('2d').putImageData(temp_4.getContext('2d').getImageData((temp_4.width/4+main_x), (temp_4.height/4+main_y), xSize, ySize), 0,0);
+
+
+temp_6.getContext('2d').globalCompositeOperation="source-out";
+temp_6.getContext('2d').drawImage(main,0,0,xSize,ySize);
+
+
+temp_6.getContext('2d').globalCompositeOperation="source-in";
+
+
+	temp_6.getContext('2d').rect(0, 0, temp_6.width, temp_6.height);
+	temp_6.getContext('2d').fillStyle="rgba(255,255,255,1)";	
+	temp_6.getContext('2d').fill();
+// ctx.globalCompositeOperation = 'darken';
+
+
+ctx.save();
+ctx.translate(main_x+xSize/2 ,main_y+ySize/2);
+
+ctx.rotate((rotation)*(Math.PI/180));
+ctx.translate(-(main_x+xSize/2) ,-(main_y+ySize/2));
+
+	    // ctx.drawImage(temp_10, main_x ,main_y,xSize,ySize);
+
+	    ctx.drawImage(temp_6, main_x ,main_y);
+	    ctx.drawImage(main, main_x ,main_y,xSize,ySize);
+	
+
+ctx.restore();
+
+
+
+}else if(color_type==3){
+ctx.globalCompositeOperation = 'multiply';
+
+}
+else if(color_type==2){
+
+
+temp_6=document.createElement("canvas");
+temp_6.width=xSize;
+temp_6.height=ySize;
+	    // temp_6.getContext('2d').putImageData(ctx.getImageData(main_x, main_y, xSize, ySize), 0,0);
+
+	    temp_4=document.createElement("canvas");
+temp_4.width=canvas.width*3;
+temp_4.height=canvas.height*3;
+// temp_4.height=;
+// temp_4.getContext('2d').save();
+temp_4.getContext('2d').translate(temp_4.width/4+main_x+xSize/2 ,temp_4.height/4+main_y+ySize/2);
+
+temp_4.getContext('2d').rotate(2*Math.PI - (rotation)*(Math.PI/180));
+temp_4.getContext('2d').translate(-(temp_4.width/4+main_x+xSize/2) ,-(temp_4.height/4+main_y+ySize/2));
+
+// temp_4.getContext('2d').restore();
+
+temp_4.getContext('2d').drawImage(canvas,temp_4.width/4,temp_4.height/4);
+// alert(main_x);
+
+	    temp_6.getContext('2d').putImageData(temp_4.getContext('2d').getImageData((temp_4.width/4+main_x), (temp_4.height/4+main_y), xSize, ySize), 0,0);
+
+
+temp_6.getContext('2d').globalCompositeOperation="source-out";
+temp_6.getContext('2d').drawImage(main,0,0,xSize,ySize);
+
+
+temp_6.getContext('2d').globalCompositeOperation="source-in";
+
+
+temp_6.getContext('2d').rect(0, 0, temp_6.width, temp_6.height);
+temp_6.getContext('2d').fillStyle="rgba(255,255,255,1)";	
+temp_6.getContext('2d').fill();
+
+// ctx.globalCompositeOperation = 'darken';
+// 	    ctx.drawImage(temp_6, main_x ,main_y);
+
+ctx.save();
+ctx.translate(main_x+xSize/2 ,main_y+ySize/2);
+
+ctx.rotate((rotation)*(Math.PI/180));
+ctx.translate(-(main_x+xSize/2) ,-(main_y+ySize/2));
+
+	    // ctx.drawImage(temp_10, main_x ,main_y,xSize,ySize);
+	    ctx.drawImage(temp_6, main_x ,main_y);
+
+ctx.restore();
+
+ctx.globalCompositeOperation = 'lighten';
+
+}else if(color_type==1){
+
+
+
+temp_6=document.createElement("canvas");
+temp_6.width=xSize;
+temp_6.height=ySize;
+	    // temp_6.getContext('2d').putImageData(ctx.getImageData(main_x, main_y, xSize, ySize), 0,0);
+
+	    temp_4=document.createElement("canvas");
+temp_4.width=canvas.width*3;
+temp_4.height=canvas.height*3;
+// temp_4.height=;
+// temp_4.getContext('2d').save();
+temp_4.getContext('2d').translate(temp_4.width/4+main_x+xSize/2 ,temp_4.height/4+main_y+ySize/2);
+
+temp_4.getContext('2d').rotate(2*Math.PI - (rotation)*(Math.PI/180));
+temp_4.getContext('2d').translate(-(temp_4.width/4+main_x+xSize/2) ,-(temp_4.height/4+main_y+ySize/2));
+
+// temp_4.getContext('2d').restore();
+
+temp_4.getContext('2d').drawImage(canvas,temp_4.width/4,temp_4.height/4);
+// alert(main_x);
+
+	    temp_6.getContext('2d').putImageData(temp_4.getContext('2d').getImageData((temp_4.width/4+main_x), (temp_4.height/4+main_y), xSize, ySize), 0,0);
+
+
+temp_6.getContext('2d').globalCompositeOperation="source-out";
+temp_6.getContext('2d').drawImage(main,0,0,xSize,ySize);
+
+
+temp_6.getContext('2d').globalCompositeOperation="source-in";
+
+
+temp_6.getContext('2d').rect(0, 0, temp_6.width, temp_6.height);
+temp_6.getContext('2d').fillStyle="rgba(255,255,255,1)";	
+temp_6.getContext('2d').fill();
+
+// ctx.globalCompositeOperation = 'darken';
+// 	    ctx.drawImage(temp_6, main_x ,main_y);
+
+ctx.save();
+ctx.translate(main_x+xSize/2 ,main_y+ySize/2);
+
+ctx.rotate((rotation)*(Math.PI/180));
+ctx.translate(-(main_x+xSize/2) ,-(main_y+ySize/2));
+
+	    // ctx.drawImage(temp_10, main_x ,main_y,xSize,ySize);
+	    ctx.drawImage(temp_6, main_x ,main_y);
+
+ctx.restore();
+ctx.globalCompositeOperation = 'lighter';
+
+
+
+
+}else if(color_type==6){
+// ctx.rotate(0);
+
+	    ctx.globalAlpha=1;
+
+
+temp_rotation=-rotation;
+// alert(way);
+
+// temp_rotation=0;
+// temp_rotation=270;
+temp_6=document.createElement("canvas");
+temp_6.width=xSize;
+temp_6.height=ySize;
+
+temp_6.getContext('2d').save();
+temp_3=document.createElement("canvas");
+temp_3.width=xSize;
+temp_3.height=ySize;
+
+ctx.save();
+// ctx.rotate(rotation*(Math.PI/180));
+temp_4=document.createElement("canvas");
+temp_4.width=canvas.width*3;
+temp_4.height=canvas.height*3;
+// temp_4.height=;
+// temp_4.getContext('2d').save();
+temp_4.getContext('2d').translate(temp_4.width/4+main_x+xSize/2 ,temp_4.height/4+main_y+ySize/2);
+
+temp_4.getContext('2d').rotate(temp_rotation*(Math.PI/180));
+temp_4.getContext('2d').translate(-(temp_4.width/4+main_x+xSize/2) ,-(temp_4.height/4+main_y+ySize/2));
+
+// temp_4.getContext('2d').restore();
+
+temp_4.getContext('2d').drawImage(canvas,temp_4.width/4,temp_4.height/4);
+// alert(main_x);
+
+	    temp_6.getContext('2d').putImageData(temp_4.getContext('2d').getImageData((temp_4.width/4+main_x), (temp_4.height/4+main_y), xSize, ySize), 0,0);
+
+temp_3.getContext('2d').imageSmoothingEnabled = false;
+
+temp_6.getContext('2d').imageSmoothingEnabled = false;    
+	    temp_3.getContext('2d').drawImage(temp_6,0,0);
+
+
+ctx.restore();
+// document.body.append(canvas);
+
+// document.body.append(temp_6);
+temp_6.getContext('2d').restore();
+// console.log(ySize,xSize);
+//start 1
+
+temp_6.getContext('2d').save();
+temp_6.getContext('2d').translate(xSize/2 ,ySize/2);
+// alert(rotation);
+// temp_6.getContext('2d').rotate(2*temp_rotation*(Math.PI/180));
+temp_6.getContext('2d').translate(-(xSize/2) ,-(ySize/2));
+
+// temp_6.getContext('2d').globalAlpha=a_c/255;
+
+
+// alert(main.height);
+temp_1=document.createElement("canvas");
+temp_1.width=xSize;
+temp_1.height=ySize;
+temp_6.getContext('2d').globalAlpha=a_c/255;
+
+temp_1.getContext('2d').globalAlpha=a_c/255;
+temp_1.getContext('2d').drawImage(main,0,0,xSize,ySize);
+
+temp_6.getContext('2d').globalCompositeOperation="darken";
+
+temp_6.getContext('2d').drawImage(temp_1,0,0,xSize,ySize);
+temp_6.getContext('2d').restore();
+
+
+
+temp_6.getContext('2d').globalCompositeOperation="destination-in";
+	
+temp_6.getContext('2d').drawImage(temp_3,0,0,xSize,ySize);
+//end 1
+// document.body.append(temp_6);
+
+// alert(rotation);
+
+
+// temp_3.getContext('2d').drawImage(temp_6,0,0,xSize,ySize);
+
+
+// temp_6.getContext('2d').rect(0, 0, temp_6.width, temp_6.height);
+// temp_6.getContext('2d').fillStyle="rgba(0,255,255,1)";	
+// temp_6.getContext('2d').fill();
+
+
+// temp_6.getContext('2d').globalAlpha=a_c;
+// temp_6.getContext('2d').save();
+// temp_6.getContext('2d').translate(xSize/2 ,ySize/2);
+
+// temp_6.getContext('2d').rotate(90*(Math.PI/180));
+// temp_6.getContext('2d').translate(-xSize/2 ,-ySize/2);
+
+// //color_change
+
+// temp_6.getContext('2d').drawImage(main,0,0,xSize,ySize);
+// temp_6.getContext('2d').restore();
+
+// ctx.translate(main_x+xSize/2 ,main_y+ySize/2);
+
+// ctx.rotate(rotation*(Math.PI/180));
+// ctx.translate(-(main_x+xSize/2) ,-(main_y+ySize/2));
+
+
+
+
+
+//start
+temp_10=document.createElement("canvas");
+temp_10.width=xSize;
+temp_10.height=ySize;
+// temp_10.getContext('2d').translate(xSize/2 ,ySize/2);
+
+// temp_10.getContext('2d').rotate(temp_rotation*(Math.PI/180));
+// temp_10.getContext('2d').translate(-(xSize/2) ,-(ySize/2));
+ctx.globalCompositeOperation = 'destination-out';
+
+temp_10.getContext('2d').rect(0, 0,temp_10.width,temp_10.height);
+// temp_10.getContext('2d').fillStyle="rgba(0,0,255,1)";	
+temp_10.getContext('2d').fill();
+ctx.save();
+ctx.translate(main_x+temp_10.width/2 ,main_y+temp_10.height/2);
+
+ctx.rotate(2*Math.PI - temp_rotation*(Math.PI/180));
+ctx.translate(-(main_x+temp_10.width/2) ,-(main_y+temp_10.height/2));
+// ctx.imageSmoothingEnabled=true;
+
+	    ctx.drawImage(temp_10, main_x ,main_y,temp_10.width,temp_10.height);
+// console.log(main_x ,main_y,xSize,ySize);
+ctx.restore();
+// // //end
+
+
+
+// document.body.append(temp_6);
+// console.log(temp_rotation);
+
+
+// ctx.globalCompositeOperation = 'darken';
+// ctx.globalAlpha = 1;
+
+ctx.globalCompositeOperation = 'source-over';
+
+ctx.save();
+ctx.translate(main_x+xSize/2 ,main_y+ySize/2);
+
+ctx.rotate(2*Math.PI - temp_rotation*(Math.PI/180));
+
+ctx.translate(-(main_x+xSize/2) ,-(main_y+ySize/2));
+ctx.imageSmoothingEnabled=false;
+	    ctx.drawImage(temp_6, main_x ,main_y,xSize,ySize);
+ctx.restore();
+
+}else if(color_type==4){
+ctx.globalCompositeOperation = 'soft-light';
+
+}else{
+ctx.globalCompositeOperation = 'source-over';
+
+}
+}
+var canvas = document.getElementById("myCanvas");
+//get DPI
+var scale_c=1;
+canvas.width=1024*scale_c;
+canvas.height=	1024*scale_c;
+let dpi = window.devicePixelRatio;
+//get canvas
+canvas = document.getElementById('myCanvas');
+//get context
+ctx = canvas.getContext('2d');
+
+//get CSS height
+//the + prefix casts it to an integer
+//the slice method gets rid of "px"
+
+
+
+var ctx = canvas.getContext("2d");
+
+
+// console.log(img);
+var ar2=[];
+var ar3=[];
+var ar4=[];
+
+
+if(true){
+
+
+var array=[];  
+// var string="05DD003d02ff00ab00cb00006bbd2eFF0001"; 
+var string =prompt("Enter the code");
+
+string.trim();
+
+
+
+
+d=0;
+string=string.split("\n");
+
+
+var ar5=new Array(string.length);
+var already=[];
+var count_check=0;
+
+ctx.imageSmoothingEnabled = false;
+
+for(var i=0;i<string.length;i++){
+
+
+	a=string[i];
+	console.log(parseInt(a.substring(0,4)));
+	if(parseInt(a.substring(0,4))==0){
+		continue;
+	}
+name=a.substring(0,4).replace(/^0+/, '');
+
+
+if(already.indexOf(name)>-1){
+continue;
+}
+else{
+	already.push(name);
+}
+
+count_check++;
+
+	color=a.substring(24,32);
+	ss="rgba("+parseInt(color.substring(0,2),16)+","+parseInt(color.substring(2,4),16)+","+parseInt(color.substring(4,6),16)+","+parseInt(color.substring(6,8),16)+")"
+ar3[name]=(new Image());
+// name=(parseInt(a.substring(0,4),)-1);
+
+// name="smf07";
+// if((name/10)<1){
+// 	name="0"+name;
+// }
+ar3[name].src = "images/"+name+".png";
+// console.log( "images/"+name+".png" ,a.substring(0,4).replace(/^0+/, ''));
+	// console.log(ar3[ar3.length-1].src);
+
+ar3[name].onload = function(){
+
+
+
+	ar4.push(1);
+
+};
+
+
+}
+
+
+
+
+var vv=setInterval(function(){
+if(ar4.length==count_check){
+	tre();
+	clearInterval(vv);
+}
+},100);
+var invert_x;
+var invert_y;
+function tre(){
+// ctx.imageSmoothingEnabled=true;
+
+// 	ctx.strokeStyle = "white";
+// ctx.rect(0, 0, canvas.width, canvas.height);
+
+// ctx.beginPath();
+// ctx.lineWidth = "10";
+// ctx.fillStyle = "white";
+// ctx.rect(0, 0, canvas.width, canvas.height);
+// // ctx.stroke();
+// ctx.fill();
+
+
+	// ctx.scale(1,1);
+	ctx.rect(0, 0, canvas.width, canvas.height);
+ctx.fillStyle="rgba(0,255,255,1)";	
+// ctx.fill();
+// temp_6.getContext('2d').rect(0, 0, temp_6.width, temp_6.height);
+// temp_6.getContext('2d').fillStyle="rgba(0,255,255,1)";	
+// temp_6.getContext('2d').fill();
+
+for(var i=0;i<string.length;i++){
+	a=string[i];
+
+		if(parseInt(a.substring(0,4))==0){
+		continue;
+	}
+
+name=a.substring(0,4).replace(/^0+/, '');
+
+	x=a.substring(4,8);
+
+	y=a.substring(8,12);
+	xSize=a.substring(12,16);
+	ySize=a.substring(16,20);
+
+	rotation=parseInt(a.substring(20,24),16);
+	// rotation=0;
+	color=a.substring(24,32);
+	// color="6285A9FF";
+	// console.log(color);
+	// alert(a.substring(20,24));
+if(rotation>32768){
+rotation=-(parseInt("FFFF",16)-rotation)%360 -1;
+}else{
+	rotation=rotation%360;
+}
+
+color_type=parseInt(a.substring(32,34));
+// console.log(color_type);
+
+
+
+// alert(rotation);
+// console.log(rotation);
+x=parseInt(x,16);
+y=parseInt(y,16);
+xSize=parseInt(xSize,16);
+// console.log(xSize);
+
+ySize=parseInt(ySize,16);
+// invert_x=1;
+if(xSize>32768){
+	xSize=Math.abs(xSize-parseInt("FFFF",16))+1;
+invert_x=-1;
+
+}else{
+	invert_x=1;
+}
+
+
+if(ySize>32768){
+	ySize=Math.abs(ySize-parseInt("FFFF",16))+1;
+	invert_y=-1;
+}else{
+	invert_y=1;
+}
+
+
+mirror=parseInt(a.substring(34,36));
+if(mirror==0 || mirror ==2 || mirror ==4 || mirror==6){
+	continue;
+}
+// console.log(x ,y,xSize,ySize);
+
+if(x>32768){
+	x=x-parseInt("FFFF",16);
+}
+
+else{
+x=x;
+}if(y>32768){
+	y=y-parseInt("FFFF",16);
+}
+else{
+x=x;
+}
+
+// alert(y);
+// y=-y;
+y=y+1024;
+x=x+1024;
+// console.log(x,y,xSize,ySize);
+m=1;
+
+ar5[i]=document.createElement('canvas');
+
+ar5_ctx=ar5[i].getContext('2d');
+// ar5[i].style.backgroundColor="Rred"
+// ar5[i].getContext('2d').rect(10, 20, 150, 100);
+
+
+// ar5[i].getContext('2d').fill();
+
+ar5[i].width = ar3[name].width;
+ar5[i].height =ar3[name].height;
+
+xSize*=m;
+ySize*=m;
+
+
+// ySize=ySize-100+ar3[i].height;
+ySize=Math.floor(0 +(((ar3[name].height - 0) / (100 - 0)) * (ySize - 0)));
+
+// console.log(ySize);
+
+if(i==1){
+// 	ySize+=5;
+}
+
+
+// console.log(((ar3[i].width - 0) / (100 - 0)) * (xSize - 0));
+
+
+xSize=Math.floor(0 + ((ar3[name].width - 0) / (100 - 0)) * (xSize - 0));
+
+
+// xSize=xSize-100+ar3[i].width;
+// xSize=ar3[i].width;
+
+main_x=Math.floor((x/(2*m)-xSize/2)*m);
+main_y=Math.floor((y/(2*m)-ySize/2)*m);
+// alert(main_y + " " +y);
+
+
+ctx.fillStyle = "#"+color;
+
+ctx.save();
+
+
+// ctx.fillRect(main_x, main_y, xSize, ySize);
+
+  // ctx.fillStyle = "blue";
+  // ctx.fillRect(main_x ,main_y,xSize,ySize);
+  
+  // set composite mode
+if(invert_y==1 && invert_x==1){
+
+
+}
+else{
+if(invert_x==-1){
+	temp_1=ar5[i].width;
+}
+else{
+	temp_1=0;
+}
+
+if(invert_y==-1){
+	temp_2=ar5[i].height;
+}
+else{
+	temp_2=0;
+}
+// alert(temp_1 + " " +  temp_2);
+
+ ar5_ctx.translate(temp_1, temp_2);
+ ar5_ctx.scale(invert_x, invert_y);
+
+// alert(temp_1 + " " + invert_x + " " + temp_2 + " " + invert_y);
+}
+
+//here
+
+
+ ar5_ctx.drawImage(ar3[name], 0, 0, ar3[name].width, ar3[name].height);
+
+
+//  ar5_ctx.rect(0, 0, ar5[i].width, ar5[i].height);
+//  ar5_ctx.fillStyle="rgba(255,255,0,0.8)";	
+//  ar5_ctx.fill();
+// console.log( ar5_ctx.getImageData(0, 0, ar3[i].width, ar3[i].height).data);
+// imgdata= ar5_ctx.getImageData(0, 0, ar3[i].width, ar3[i].height);
+
+// var sum=0;
+r=parseInt(color.substring(0,2),16);
+g=parseInt(color.substring(2,4),16);
+b=parseInt(color.substring(4,6),16);
+a_c=parseInt(color.substring(6,8),16);
+
+// // r=0;
+// // b=192;
+// // g=255;
+
+
+
+// // for(var j=3;j<imgdata.data.length;j+=4){
+
+// // if(imgdata.data[j]!=0){
+// // 	imgdata.data[j-3]=(imgdata.data[j-3]/255)*(r+imgdata.data[j-3]-255);
+// // 	imgdata.data[j-2]=(imgdata.data[j-2]/255)*(g+imgdata.data[j-2]-255);
+// // 	imgdata.data[j-1]=(imgdata.data[j-1]/255)*(b+imgdata.data[j-1]-255);
+// // 	imgdata.data[j]=(imgdata.data[j]/255)*(a_c+imgdata.data[j]-255);
+
+// // }
+
+
+// // }
+// // console.log(imgdata);
+
+// 	     ar5_ctx.putImageData(imgdata, 0,0);
+
+color_change_main(ar5[i],r,g,b,a_c);
+
+// document.body.append(ar5[i],r,g,b,a_c);
+
+
+//  ar5_ctx.putImageData(imgdata,this.width, this.height);
+
+color_change(color_type,main_x ,main_y,xSize,ySize,ar5[i],rotation,a_c);
+
+if(color_type!=6 && color_type!=5 && color_type!=4){
+	    ctx.globalAlpha=a_c/255;
+
+ctx.translate(main_x+xSize/2 ,main_y+ySize/2);
+
+ctx.rotate(rotation* Math.PI / 180);
+ctx.translate(-(main_x+xSize/2) ,-(main_y+ySize/2));
+
+	    ctx.drawImage(ar5[i], main_x ,main_y,xSize,ySize);
+
+	    // ctx.drawImage(ar5[i], main_x ,main_y,xSize,ySize);
+
+	}
+//  ar5_ctx.translate(-ar5[i].width,-ar5[i].height);
+
+
+
+
+
+
+ctx.restore();
+
+// mirror=555;
+// mirror=0;
+if(mirror==5){
+	
+	    ar5_1=document.createElement("canvas");
+	    ar5_1.width=ar5[i].width;
+	    ar5_1.height=ar5[i].height;
+	    ctx.save();
+
+	    ar5_1.getContext('2d').save();
+
+ar5_1.getContext('2d').translate(0, ar5_1.height);
+ar5_1.getContext('2d').scale(1, -1);
+
+	    ar5_1.getContext('2d').drawImage(ar5[i],0,0);
+main_y_1=Math.floor(((-(y-1024)+1024)/(2*m)-ySize/2)*m) ;
+
+
+
+// main_y=(Math.abs(1024-y)/(2*m)-ySize/2)*m;
+// alert(main_y);
+
+	color_change(color_type,main_x ,main_y_1,xSize,ySize,ar5_1,-rotation,a_c,1);
+
+if(color_type!=6 && color_type!=5 && color_type!=4){
+// ctx.globalAlpha=0;
+	    ctx.globalAlpha=a_c/255;
+ctx.translate((main_x+xSize/2) ,(main_y_1+ySize/2));
+	    ctx.rotate(-rotation* Math.PI / 180);
+ctx.translate(-(main_x+xSize/2) ,-(main_y_1+ySize/2));
+	    ctx.drawImage(ar5_1,main_x ,main_y_1,xSize,ySize);
+
+}
+
+ar5_1.getContext('2d').restore();
+
+	    ctx.restore();
+
+}
+else if(mirror==3){
+
+
+
+
+	     ar5_1=document.createElement("canvas");
+	    ar5_1.width=ar5[i].width;
+	    ar5_1.height=ar5[i].height;
+	    ctx.save();
+
+	    ar5_1.getContext('2d').save();
+
+ar5_1.getContext('2d').translate(ar5_1.width,0);
+ar5_1.getContext('2d').scale(-1, 1);
+
+	    ar5_1.getContext('2d').drawImage(ar5[i],0,0);
+main_x_1=Math.floor(((-(x-1024)+1024)/(2*m)-xSize/2)*m) ;
+
+
+
+// main_y=(Math.abs(1024-y)/(2*m)-ySize/2)*m;
+// alert(main_y);
+
+	color_change(color_type,main_x_1 ,main_y,xSize,ySize,ar5_1,-rotation,a_c,1);
+
+if(color_type!=6 && color_type!=5 && color_type!=4){
+// ctx.globalAlpha=0;
+	    ctx.globalAlpha=a_c/255;
+ctx.translate((main_x_1+xSize/2) ,(main_y+ySize/2));
+	    ctx.rotate(-rotation* Math.PI / 180);
+ctx.translate(-(main_x_1+xSize/2) ,-(main_y+ySize/2));
+	    ctx.drawImage(ar5_1,main_x_1 ,main_y,xSize,ySize);
+
+}
+
+ar5_1.getContext('2d').restore();
+
+	    ctx.restore();
+
+
+}
+else if(mirror==7){
+
+		    ar5_1=document.createElement("canvas");
+	    ar5_1.width=ar5[i].width;
+	    ar5_1.height=ar5[i].height;
+	    ctx.save();
+
+	    ar5_1.getContext('2d').save();
+
+ar5_1.getContext('2d').translate(0, ar5_1.height);
+ar5_1.getContext('2d').scale(1, -1);
+
+	    ar5_1.getContext('2d').drawImage(ar5[i],0,0);
+main_y_1=Math.floor(((-(y-1024)+1024)/(2*m)-ySize/2)*m) ;
+
+
+
+// main_y=(Math.abs(1024-y)/(2*m)-ySize/2)*m;
+// alert(main_y);
+
+	color_change(color_type,main_x ,main_y_1,xSize,ySize,ar5_1,-rotation,a_c,1);
+
+if(color_type!=6 && color_type!=5 && color_type!=4){
+// ctx.globalAlpha=0;
+	    ctx.globalAlpha=a_c/255;
+ctx.translate((main_x+xSize/2) ,(main_y_1+ySize/2));
+	    ctx.rotate(-rotation* Math.PI / 180);
+ctx.translate(-(main_x+xSize/2) ,-(main_y_1+ySize/2));
+	    ctx.drawImage(ar5_1,main_x ,main_y_1,xSize,ySize);
+
+}
+
+ar5_1.getContext('2d').restore();
+
+	    ctx.restore();
+
+
+
+
+
+	     ar5_1=document.createElement("canvas");
+	    ar5_1.width=ar5[i].width;
+	    ar5_1.height=ar5[i].height;
+	    ctx.save();
+
+	    ar5_1.getContext('2d').save();
+
+ar5_1.getContext('2d').translate(ar5_1.width,0);
+ar5_1.getContext('2d').scale(-1, 1);
+
+	    ar5_1.getContext('2d').drawImage(ar5[i],0,0);
+main_x_1=Math.floor(((-(x-1024)+1024)/(2*m)-xSize/2)*m) ;
+
+
+
+// main_y=(Math.abs(1024-y)/(2*m)-ySize/2)*m;
+// alert(main_y);
+
+	color_change(color_type,main_x_1 ,main_y,xSize,ySize,ar5_1,-rotation,a_c,1);
+
+if(color_type!=6 && color_type!=5 && color_type!=4){
+// ctx.globalAlpha=0;
+	    ctx.globalAlpha=a_c/255;
+ctx.translate((main_x_1+xSize/2) ,(main_y+ySize/2));
+	    ctx.rotate(-rotation* Math.PI / 180);
+ctx.translate(-(main_x_1+xSize/2) ,-(main_y+ySize/2));
+	    ctx.drawImage(ar5_1,main_x_1 ,main_y,xSize,ySize);
+
+}
+
+ar5_1.getContext('2d').restore();
+
+	    ctx.restore();
+	    
+
+
+
+
+
+
+
+
+	     ar5_1=document.createElement("canvas");
+	    ar5_1.width=ar5[i].width;
+	    ar5_1.height=ar5[i].height;
+	    ctx.save();
+
+	    ar5_1.getContext('2d').save();
+
+ar5_1.getContext('2d').translate(ar5_1.width,ar5_1.height);
+ar5_1.getContext('2d').scale(-1, -1);
+
+	    ar5_1.getContext('2d').drawImage(ar5[i],0,0);
+main_x_1=Math.floor(((-(x-1024)+1024)/(2*m)-xSize/2)*m) ;
+main_y_1=Math.floor(((-(y-1024)+1024)/(2*m)-ySize/2)*m) ;
+
+
+
+// main_y=(Math.abs(1024-y)/(2*m)-ySize/2)*m;
+// alert(main_y);
+	    ctx.globalAlpha=a_c/255;
+
+	color_change(color_type,main_x_1 ,main_y_1,xSize,ySize,ar5_1,rotation,a_c,1);
+
+if(color_type!=6 && color_type!=5 && color_type!=4){
+// ctx.globalAlpha=0;
+	    ctx.globalAlpha=a_c/255;
+ctx.translate((main_x_1+xSize/2) ,(main_y_1+ySize/2));
+	    ctx.rotate(rotation* Math.PI / 180);
+ctx.translate(-(main_x_1+xSize/2) ,-(main_y_1+ySize/2));
+	    ctx.drawImage(ar5_1,main_x_1 ,main_y_1,xSize,ySize);
+
+}
+
+ar5_1.getContext('2d').restore();
+
+	    ctx.restore();  
+}
+
+
+// document.body.append(ar5[i]);
+// document.body.append(ar5_1);
+
+// console.log(ar3[i]);
+  // ctx.globalCompositeOperation = "destination-in";
+
+
+
+	
+// console.log();
+
+
+ 
+// ctx.rotate(-10* Math.PI / 180);
+
+// ctx.translate(-x,-y);
+
+
+	// ctx.globalAlpha = 0.5;
+
+
+// ctx.globalCompositeOperation = 'luminosity';
+
+
+
+// http://stackoverflow.com/questions/3768565/drawing-a-svg-file-on-a-html5-canvas
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+}
+
+
+}
+function ref(v,w){
+console.log(v);
+
+	    ctx.drawImage(v,ar4[0],ar4[1],ar4[2],ar4[3]);
+}
+// document.getElementById('dl').addEventListener('click', dlCanvas, false);
+// ctx.translate(canvas.wi,0);
+// ctx.scale(1, 1);
+
+
+
+
+</script>
