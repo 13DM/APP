@@ -1,0 +1,72 @@
+Welcome to the help file! This will we filled with more detailed informatio and help about the tool.
+
+Overview: This tool can make edits to grouped layer codes at once, and is only a helper to the game. The tool is developer approved, the source code was given to illey and he says its a great help!
+
+To start copy your code from a text editor whether that be Google Docs or however you get your code from the game to your computer, and place it in the input box.
+You can also use the load and save functions located at the top, the tool will save files to a .frl extension and can be loaded as well for editing at a later time.
+
+
+
+• The Transforms tab holds basic edits to the code. 
+
+With the Move Layers option you can do basic transforms to move groups of layers at once. The livery editor has two axis, the "x" axis and the "y" axis and you've noticed in game.
+How the tool utilizes this is whatever amount you use in the tool it will move the layers that amount. If you want to move the layers down and over to the right you would use positive amounts.
+If you want to move the layers up and to the left, you would use negative amounts. 
+A helpful tip is to place a square outlining you group of layers and duplicate it so you have two of them. Now move one of them where you want your layers and input the difference into the tool to get extreme accuracy!
+
+The sizing individual layers function is not to be confused with scaling the layers. Using this will only make the individual layers bigger by the ammount you are adding.
+This will not correct the layers placement when making them bigger or smaller. This is useful if you have to make things more bold without changing their placement.
+
+You can also change the color of all the layers at once, to do this you just have to input the new color you want in "RRGGBBAA" format. 
+RR being hex number in red, GG being the hex in green, BB being the hex in blue, and AA being the hex of the transparency. (TIP the tool will only accept 0-9 and A-F)
+
+You can also change the mirror status or if the layers are mirrored to the other side or not. Here I will provied the numbers and what they are.
+1 - Not Mirrored
+3 - Mirrored front to back
+5 - Mirrored side to side
+7 - Mirror both front to back and side to side
+
+The tool will accept multiple changes at once in this tab and to apply whichever you want just hit the apply button!
+
+
+• The Scale and Rotate menu
+
+Here you can actually scale the layers either bigger or smaller by using a multiplier or a percentage.
+(example: to make an image twice as big you can use either 2 or 200. They will yield the same result.)
+You can scale by individual axis to correct proportions so you can scale in the x axis at a different value than the y.
+
+Scaling the layers will change their placement to keep the shape of the original design while making it bigger or smaller.
+
+You can also rotate the image in degrees in place just like you would a single layer. Theres a lot of math in this one but it always comes out fairly accurate.
+For this just input the amount of rotation in degrees that you want and the tool will handle the rest. Just be sure to keep the rotation you want to apply between 360 and -360 degrees.
+
+
+
+• Outline and Text Creator
+
+Here you can outline layers and create text to "words" using their in game font characters.
+
+The ouline function is not really usable unless you're doing the in game sponsor logos as it will raise the layer count you provided by five times the original amount.
+To use it put the desired width of the outline and the color you want and it will do the rest.
+
+The text creator is updated to work in 2.4 and can do all three of the fonts provided in game. You can also select multiple options and it will place the different options on top of eachother so you can scale them in game.
+To do this just type out what you want in the text box and select the size of the letters and hit create! Simple as that. 
+(Note the program doesn't support periods or hyphens but will instead leave the space for them to add in yourself)
+
+
+
+• Other options
+
+This tool also support two languages english and japanese although the japanese translation is rough and probably not correct.
+
+You can also directly copy the output box to your clipboard using the copy to clipboard button located above the output box.
+
+The copy button in the bottom right will over write the input code box with what is in the output for quickly editing something you already applied edits to.
+This will delete the original input code so be sure to save it, as you can not get it back once it's gone. 
+
+The reset button will reset all fields and values, so be sure that you have saved everything that you wanted before hand. 
+
+
+
+• This tool was created by Midnight Senpai from FRLegendsHub.com for the vip users on the site. Updates can be found on the original post where you got this tool.
+If you have any questions please direct them to frlegendshub.help@gmail.com.
