@@ -1,0 +1,5 @@
+This tool was developed to help players manage and move multiple layers in their designs on FR Legends the game. 
+
+Players could take multiple single layer designs and manipulate them as if they were a single grouped layer. This code was optimised and adapted for use for the current game, and is the base for which we have grouping. As thus further development was siezed on this, and in turn turned towards a live preview system for the website. This was then used to create a database for plagiarism while people paste their codes. It further turned into a marketplace for storing logos and designs. 
+
+The preview system is based off the paint tool, and is instead written in javascript to be implemented on SMF systems with html. 
